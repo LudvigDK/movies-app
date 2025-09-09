@@ -1,0 +1,4 @@
+{
+  "startUrl": "https://cineby.app",
+  "inject": "console.log('Hello from remote config!');"
+}
