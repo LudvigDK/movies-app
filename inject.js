@@ -9,7 +9,7 @@
     const key = onceKey();
     if (document[key]) return;
     document[key] = true;
-
+alert("1");
     setInterval(() => {
       // Remove all scripts from 68s8.com
       document.querySelectorAll('script[src*="//68s8.com/"]').forEach(el => el.remove());
