@@ -1,4 +1,4 @@
 {
   "startUrl": "https://cineby.app",
-  "inject": "console.log('Hello from remote config!');"
+  "inject": "https://raw.githubusercontent.com/LudvigDK/movies-app/refs/heads/main/inject.js"
 }
