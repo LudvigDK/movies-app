@@ -13,7 +13,8 @@
     setInterval(() => {
       // Remove all scripts from 68s8.com
       document.querySelectorAll('script[src*="//68s8.com/"]').forEach(el => el.remove());
-document.querySelector('script[id="adstag"]').remove();
+//document.querySelector('script[id="adstag"]').remove();
+sessionStorage.setItem('ads-enabled-session', false);
 
       // Remove all divs with z-index > 1000
       document.querySelectorAll('div').forEach(el => {
