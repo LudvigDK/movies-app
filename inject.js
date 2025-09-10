@@ -9,22 +9,19 @@
     const key = onceKey();
     if (document[key]) return;
     document[key] = true;
-alert("1");
-    setInterval(() => {
-      // Remove all scripts from 68s8.com
-      document.querySelectorAll('script[src*="//68s8.com/"]').forEach(el => el.remove());
-document.querySelector('script[id="adstag"]').remove();
-sessionStorage.setItem('ads-enabled-session', false);
+    
+    // Remove all scripts from 68s8.com
+    document.querySelectorAll('script[src*="//68s8.com/"]').forEach(el => el.remove());
+    sessionStorage.setItem('ads-enabled-session', false);
 
-      // Remove all divs with z-index > 1000
-      document.querySelectorAll('div').forEach(el => {
-        const style = window.getComputedStyle(el);
-        const z = parseInt(style.zIndex, 10);
-        if (!isNaN(z) && z > 1000) {
-          el.remove();
-        }
-      });
-    }, 100);
+    // Remove all divs with z-index > 10000
+    document.querySelectorAll('div').forEach(el => {
+      const style = window.getComputedStyle(el);
+      const z = parseInt(style.zIndex, 10);
+      if (!isNaN(z) && z > 10000) {
+        el.remove();
+      }
+    });
   };
 
   const rerun = debounce(init, 50);
